@@ -1,9 +1,17 @@
 ## Live App
+
 [Click Here](https://engineer-ai.netlify.app/)
 
 or
 
 https://engineer-ai.netlify.app/
+
+[Note]: The weather part of the app will not work on the live build since the build is on https and the api is on http
+
+To use the complete app,
+1. `git clone <url>`
+2. `npm i` 
+3. `npm start`
 
 ## Available Scripts
 
