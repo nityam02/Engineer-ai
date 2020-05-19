@@ -19,7 +19,8 @@ class CountryCard extends Component {
         }
     }
     render() {
-        const { data, weatherData, isLoading } = this.props;
+        const { data } = this.props;
+        const { weatherData, isLoading } = this.state
         return (
             <>
                 <tr>
@@ -34,7 +35,7 @@ class CountryCard extends Component {
                         {
                             !isLoading ?
                                 (
-                                    <span onClick={() => this.fetchWeather(data.capital)} >
+                                    <span style={{ cursor: "pointer" }} onClick={() => this.fetchWeather(data.capital)} >
                                         Capital Weather
                                     </span>
                                 )
