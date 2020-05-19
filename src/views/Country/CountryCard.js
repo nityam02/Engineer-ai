@@ -63,16 +63,14 @@ function WeatherCard({ data }) {
     const { current } = data;
     return (
         <>
-            <p>Temperature {current ? current.temperature : ""}</p>
-            <p>Wind_Speed{current ? current.wind_speed : ""}</p>
-            <p>precip {current ? current.precip : ""}</p>
+            <p>Temperature: {current?.temperature} </p>
+            <p>Wind Speed: {current?.wind_speed} </p>
+            <p>Precipitation: {current?.precip} </p>
             <p>
-                {current.weather_icons.map((i) => (
-                    <img src={i} alt="" />
-                ))
-                }
+                {current?.weather_icons?.map((i) => (
+                    <img style={{ maxWidth: "80px" }} src={i} alt="weather icon" />
+                ))}
             </p>
-
         </>
     )
 

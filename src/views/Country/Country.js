@@ -17,7 +17,12 @@ class Country extends Component {
 
     async componentDidMount() {
         let result = await this.fetchData();
-        this.setState({ countryData: result });
+        if (Array.isArray(result))
+            this.setState({ countryData: result });
+        else {
+            alert("Invalid Country Name")
+            this.props.history.push("/")
+        }
     }
     fetchData = async () => {
         const { match } = this.props
@@ -36,7 +41,7 @@ class Country extends Component {
                         <th>Flag</th>
                         <th>Weather</th>
                     </tr>
-                    {countryData.map((c, index) => <CountryData data={c} key={index} />)
+                    {countryData?.map((c, index) => <CountryData data={c} key={index} />)
                     }
                 </table>
             </div>
