@@ -1,0 +1,17 @@
+.view-country-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+}
+td {
+  padding: 12px;
+}
+tr:hover {
+  background-color: rgba(73, 200, 233, 0.4);
+}

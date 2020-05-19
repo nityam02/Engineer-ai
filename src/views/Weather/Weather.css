@@ -1,0 +1,34 @@
+.view-weather-app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    font-size: 20px;
+    margin-bottom: 20px;;
+}
+
+.input{
+    font-size:20px;
+    margin-bottom: 16px;
+}
+.button{
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: rgba(62, 62, 224, 1);;
+    color: #fff;
+}
+
+.button:disabled{
+    background-color: rgb(173, 168, 168);;
+    cursor: not-allowed;
+    color: #000;
+}
